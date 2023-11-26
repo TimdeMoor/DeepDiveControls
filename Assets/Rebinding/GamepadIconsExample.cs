@@ -1,10 +1,10 @@
 using System;
+using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 ////TODO: have updateBindingUIEvent receive a control path string, too (in addition to the device layout name)
 
-namespace UnityEngine.InputSystem.Samples.RebindUI
-{
     /// <summary>
     /// This is an example for how to override the default display behavior of bindings. The component
     /// hooks into <see cref="RebindActionUI.updateBindingUIEvent"/> which is triggered when UI display
@@ -110,4 +110,3 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             }
         }
     }
-}
