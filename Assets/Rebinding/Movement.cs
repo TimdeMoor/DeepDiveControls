@@ -18,12 +18,16 @@ public class Movement : MonoBehaviour
         input.LoadBindingOverridesFromJson(PlayerPrefs.GetString("SavedControls"));
         rb = GetComponent<Rigidbody2D>();
     }
-    
+
     private void OnEnable()
     {
         input.Enable();
         input.InGame.Move.performed += OnMovementPerformed;
         input.InGame.Move.canceled += OnMovementCanceled;
+
+        input.InGame.Attack.performed += OnAttackPerformed;
+        input.InGame.Interact.performed += OnInteractPerformed;
+        input.InGame.Jump.performed += OnJumpPerformed;
     }
 
     private void OnDisable()
@@ -41,6 +45,23 @@ public class Movement : MonoBehaviour
     private void OnMovementPerformed(InputAction.CallbackContext value)
     {
         moveDirection = value.ReadValue<Vector2>();
+    }
+    
+    private void OnJumpPerformed(InputAction.CallbackContext value)
+    {
+        PopUpSpawner.instance.SpawnPopUp(transform.position, "Jump!");
+    }
+    
+    private void OnAttackPerformed(InputAction.CallbackContext value)
+    {
+        PopUpSpawner.instance.SpawnPopUp(transform.position, "Attack!");
+
+    }
+    
+    private void OnInteractPerformed(InputAction.CallbackContext value)
+    {
+        PopUpSpawner.instance.SpawnPopUp(transform.position, "Interact!");
+
     }
 
     private void OnMovementCanceled(InputAction.CallbackContext value)
