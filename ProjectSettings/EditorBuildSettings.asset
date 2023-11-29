@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Rebinding/RebindScene.unity
+    guid: bfcbfe5d5ea4d69439c5805996be763b
+  - enabled: 1
+    path: Assets/Rebinding/ControlsTest.unity
+    guid: d256f221b68883546acd411640fcf57f
   m_configObjects: {}

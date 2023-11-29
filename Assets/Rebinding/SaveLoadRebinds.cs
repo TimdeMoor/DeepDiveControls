@@ -15,6 +15,6 @@ public class SaveLoadRebinds : MonoBehaviour
     public void OnDisable()
     {
         PlayerPrefs.SetString("SavedControls", _inputActions.SaveBindingOverridesAsJson());
-        Debug.Log("Saved as " + _inputActions.SaveBindingOverridesAsJson());
+        //Debug.Log("Saved as " + _inputActions.SaveBindingOverridesAsJson());
     }
 }
