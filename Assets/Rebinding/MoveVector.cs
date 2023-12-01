@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveVector : MonoBehaviour
 {
-    [SerializeField] Vector3 MoveDelta = Vector3.zero;
+    [SerializeField] public Vector3 MoveDelta = Vector3.zero;
 
     // Update is called once per frame
     void Update()

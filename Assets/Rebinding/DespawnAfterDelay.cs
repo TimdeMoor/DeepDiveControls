@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DespawnAfterDelay : MonoBehaviour
 {
-    [SerializeField][Range(1f, 10f)] private float DelayInSec = 2f;
+    [SerializeField][Range(1f, 10f)] public float DelayInSec = 2f;
     // Start is called before the first frame update
     void Start()
     {
